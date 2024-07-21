@@ -35,4 +35,39 @@ Grants all privileges to the user ‘testuser’ on the database ‘testdb’ wh
 GRANT ALL ON testdb.* TO 'testuser'@'localhost'
 ```
 
+---
+mysql.connector: A Python library that facilitates connecting to MySQL databases.
+```python
+import mysql.connector
+```
+
+Function Definition: dbconfig() is defined to handle the database connection.<br>
+Try Block:
+mysql.connector.connect(): Attempts to establish a connection to the MySQL database.<br>
+Parameters:
+host='localhost': Specifies that the database server is running on the local machine.<br>
+user='manoj': The username to log into the database.<br>
+passwd='MAN#db24': The password associated with the user 'manoj'.<br>
+```python
+def dbconfig():
+    try:
+        db = mysql.connector.connect(
+            host='localhost',
+            user='manoj',
+            passwd='MAN#db24'
+        )
+    except Exception as e:
+        console.print_exception(show_locals=True)
+
+    return db
+```
+
+dbconfig function to establish a connection to the MySQL database
+```
+db = dbconfig()
+```
+cursor = db.cursor(): Creates a cursor object using the database connection. The cursor object is used to execute SQL queries and fetch results.
+```
+cursor = db.cursor()
+```
 
