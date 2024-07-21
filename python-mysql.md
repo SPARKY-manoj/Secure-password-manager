@@ -63,11 +63,11 @@ def dbconfig():
 ```
 
 dbconfig function to establish a connection to the MySQL database
-```
+```python
 db = dbconfig()
 ```
 cursor = db.cursor(): Creates a cursor object using the database connection. The cursor object is used to execute SQL queries and fetch results.
-```
+```python
 cursor = db.cursor()
 ```
 
