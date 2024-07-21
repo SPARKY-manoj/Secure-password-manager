@@ -70,4 +70,12 @@ cursor = db.cursor(): Creates a cursor object using the database connection. The
 ```python
 cursor = db.cursor()
 ```
+execute function is used to execute the sql queries
+```python
+cursor.execute(query, data)
+```
 
+Commits the transaction to make the changes permanent in the database.
+```python
+db.commit()
+```
