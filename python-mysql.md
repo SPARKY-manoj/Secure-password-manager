@@ -79,3 +79,7 @@ Commits the transaction to make the changes permanent in the database.
 ```python
 db.commit()
 ```
+It retrieves all (or all remaining) rows of a query result set and returns them as a list of tuples. If no more rows are available, it returns an empty list.
+```python
+cursor.fetchall()
+```
